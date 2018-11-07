@@ -1,0 +1,115 @@
+// HOME PAGE STYLES 
+.main-header {
+     background-color: $primary;
+}
+ .hero-headline-container {
+     width: 60%;
+     align-self: center;
+     z-index: 10;
+     position: relative;
+}
+ .hero-headline {
+     color: white;
+     font-family: $headingfont;
+     font-size: 12.5rem;
+     text-transform: uppercase;
+     letter-spacing: 1px;
+     margin-left: 50px;
+     margin-bottom: 50px;
+     line-height: 1.5;
+}
+ .hero-headline-container::before {
+     content: "";
+     width: 100%;
+     height: 170px;
+     position: absolute;
+     top: 0;
+     left: 0;
+     background-image: url(../assets/circle-text.png);
+     background-repeat: no-repeat;
+}
+ .hero-image {
+     width: 400px;
+     width: 40%;
+     position: relative;
+     box-shadow: 20px 20px $white;
+     right: 0;
+     top: 75px;
+}
+ // BLOG & CONTACT PAGE STYLES 
+ .blog .wrapper, .contact 
+ .wrapper {
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-end;
+}
+ .header {
+     height: 50vh;
+     display: flex;
+     flex-direction: column;
+     &--blog {
+         background-image: url(../assets/blog-image-1.jpg);
+         background-size: cover;
+    }
+     &--contact {
+         background-image: url(../assets/contact-image-1.jpg);
+         background-size: cover;
+         background-position: bottom;
+    }
+     &__headline {
+         @include heading-text(80);
+         color: $light;
+         line-height: 92px;
+         position: relative;
+         top: 17px;
+    }
+}
+ // MEDIA QUERIES 
+ @media (max-width: 1040px) {
+     .hero-image {
+         top: 25px;
+    }
+}
+ @media (max-width: 925px) {
+     .hero-headline {
+         font-size: 10rem;
+    }
+     .hero-headline-container::before {
+         top: -20px;
+     }
+}
+ @media (max-width: 768px) {
+     .main-header {
+         height: 85vh;
+         background-image: url(../assets/home-image-1.jpg);
+         background-repeat: no-repeat;
+         background-size: cover;
+         background-position: center;
+    }
+     .hero-image {
+         display: none;
+    }
+     .hero-headline-container {
+         align-self: flex-start;
+         line-height: auto;
+    }
+     .hero-headline {
+         line-height: 1;
+    }
+     .hero-headline-container::before {
+         top: -50px;
+     }
+}
+ @media (max-width: 560px) {
+     .hero-headline {
+         font-size: 8rem;
+    }
+}
+ @media (max-width: 440px) {
+     .hero-headline-container::before {
+         display:none;
+    }
+     .hero-headline {
+         font-size: 5rem;
+    }
+}

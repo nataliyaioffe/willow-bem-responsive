@@ -1,0 +1,225 @@
+// WHO'S WILLOW
+
+.head-section {
+    &__section-content--right {
+        width: 65%;
+        padding-left: 50px;
+    }
+}
+.head-section--top {
+    padding: 150px 0 175px 0;
+    text-align: center;
+}
+.head-section--bottom {
+    padding: 150px 0 100px 0;
+}
+.section-content {
+    &__text {
+        &--left {
+            padding-left: 100px;
+        }
+        &--right {
+            text-align: right;
+        }
+    }
+    &__headline-text {
+        margin-bottom: 20px;
+    }
+    &__description {
+        margin-bottom: 15px;
+    }
+    &__btn {
+        @include button(auto);
+        padding: 10px 30px;
+        margin-top: 15px;
+    }
+}
+
+// FAVOURITE THINGS / BUCKET LIST
+.subsection {
+    background: $white;
+}
+.subsection-content {
+    display: flex;
+    justify-content: space-between;
+    &--top {
+        position: relative;
+        top: -35px;
+    }
+    &--bottom {
+        position: relative;
+        bottom: -35px;
+    }
+    &__item {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+    }
+    &__item--right {
+        justify-content: flex-end;;
+        padding-left: 10%;
+    }
+    &__item--left {
+        justify-content: flex-start;
+        padding-right: 10%;
+        text-align: right;
+    }    
+}
+.fb-box-shadow--left {
+    box-shadow: 20px 20px $secondary, 
+    -250px 20px $secondary;
+    position: relative;
+    top: -20px;
+}
+.fb-box-shadow--right {
+    box-shadow: 20px 20px $primary, 
+    250px 20px $primary;
+    position: relative;
+}
+
+// WILLOW's JOURNEY
+.box-shadow {
+    box-shadow: 20px 20px $secondary;
+    position: relative;
+    bottom: 30px;
+}
+
+.test {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+
+}
+
+// GALLERY
+.gallery {
+    padding: 100px 0;
+    &__item {
+        width: calc(33.333% - 30px);
+    }
+}
+
+// ICON BLURBS
+.blurbs {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 100px 0;
+    &__blurb-item {
+        display: flex;
+        width: calc(50% - 30px);
+        margin: 30px 0;
+    }
+    &__icon-item {
+        margin-right: 25px;
+        position: relative;
+        top: -15px;
+    }
+    &__icon {
+        background-color: $accent;
+        padding: 20px;
+        border-radius: 50%;
+    }
+}
+
+// MEDIA QUERIES
+@media (max-width: 1135px) {
+    .subsection-content {
+        padding: 50px 0;
+    &--top {
+            position: relative;
+            top: 0px;
+        }
+    &--bottom {
+            position: relative;
+            bottom: 0px;
+        }
+    }
+}
+@media (max-width: 1040px) {
+    .head-section--top {
+        padding: 100px 0 150px 0;
+    }
+}
+@media (max-width: 960px ) {
+    .section-content__image {
+        display:none;
+    }
+    .head-section__section-content--right {
+        text-align: center;
+        width: 100%;
+    }
+    .subsection-content {
+        flex-direction: column;
+        padding: 50px 0 25px 0;
+        &--bottom {
+            flex-direction: column-reverse;
+            padding-top: 0;
+        } 
+        &--top{
+            padding-top: 50px;
+        }
+    }
+    .subsection-content__item {
+        width: 100%;
+        text-align: center;
+        padding: 0 0 25px 0;
+    }
+    .fb-box-shadow--left, 
+    .fb-box-shadow--right {
+        max-width: 75%;
+        position: static;
+        align-self: center;
+        margin-bottom: 50px;
+    }
+    .fb-box-shadow--left {
+        box-shadow: 
+        20px 20px $secondary, 
+        -250px 20px $secondary,
+        -20px 20px $secondary, 
+        250px 20px $secondary;
+    }
+    .fb-box-shadow--right {
+        box-shadow: 
+        20px 20px $primary, 
+        250px 20px $primary,
+        -20px 20px $primary,
+        -250px 20px $primary;
+    }
+}
+
+@media (max-width: 768px) {
+    .subsection__gallery .wrapper {
+        width: 100vw;
+    }
+    .gallery {
+        padding: 25px 0;
+        &__item {
+            width: 50%;
+            &:nth-of-type(3) {
+                border: 5px solid blue;
+                display:none;
+            }
+        }
+    }
+    .blurbs {
+        flex-direction: column;
+        padding: 50px 0;
+        &__blurb-item {
+            width: 100%;
+            text-align: center;
+            flex-direction: column;
+        }
+        &__icon-item {
+            margin-right: 0;
+        }
+    }
+}
+
+@media (max-width: 340px){
+    .fb-box-shadow--left img {
+        width: 300px;
+    }
+    .fb-box-shadow--right img {
+        width: 300px;
+    }
+}

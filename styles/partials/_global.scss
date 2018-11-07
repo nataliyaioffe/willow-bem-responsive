@@ -1,0 +1,59 @@
+/* START GLOBAL STYLES */
+img {
+     width: 100%;
+     max-width: 100%;
+     display: block;
+}
+ a {
+     text-decoration: none;
+     color: $dark;
+}
+ ul {
+     list-style-type: none;
+}
+ html {
+     font-size: 62.5%;
+}
+ body {
+     @include body-text(20);
+     background: $light;
+     color: $dark;
+}
+ .wrapper {
+     margin: 0 auto;
+     max-width: 1280px;
+     width: 80%;
+     height: 100%;
+}
+ .flex-wrapper {
+     display: flex;
+     justify-content: space-between;
+}
+
+/* END GLOBAL STYLES */
+
+
+h2 {
+    @include heading-text(42);
+}
+h3 {
+    @include heading-text(32);
+}
+h4 {
+    @include heading-text(24);
+}
+
+// MEDIA QUERIES
+@media (max-width: 1272px) {
+     .wrapper {
+         width: 90%;
+    }
+}
+ @media (max-width: 768px) {
+     .wrapper {
+         width: 90%;
+    }
+     .main-header .flex-wrapper {
+         flex-direction: column;
+    }
+}
