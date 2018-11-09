@@ -1,3 +1,29 @@
+// BEM TEST
+.text-block-wrapper {
+    width: 50%;
+    text-align: right
+}
+.text-block {
+    padding: 30px;
+    border: 1px solid red;
+    margin-top: 50px;
+    &__headline {
+        margin-bottom: 20px;
+    }
+    &__paragraph {
+        margin: 15px 0;
+    }
+    &__btn {
+        @include button(auto);
+        padding: 10px 30px;
+        margin-top: 15px;
+    }
+}
+// END BEM TEST
+
+
+
+
 .columns-layout {
      padding: 100px 0;
 }
