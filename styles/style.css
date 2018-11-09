@@ -643,35 +643,19 @@ h4 {
   .fb-box-shadow--right img {
     width: 300px; } }
 
-.text-block-wrapper {
-  width: 50%;
-  text-align: right; }
+body {
+  background: lightblue; }
 
-.text-block {
-  padding: 30px;
-  border: 1px solid red;
-  margin-top: 50px; }
-  .text-block__headline {
-    margin-bottom: 20px; }
-  .text-block__paragraph {
-    margin: 15px 0; }
-  .text-block__btn {
-    width: auto;
-    display: inline-block;
-    background: #e4a436;
-    font-family: "Abril Fatface", cursive;
-    line-height: 32px;
-    letter-spacing: 1px;
-    text-align: center;
-    text-transform: uppercase;
-    color: #1f1f1f;
-    padding: 10px 30px;
-    margin-top: 15px; }
-
-.columns-layout {
+.blog-flex-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   padding: 100px 0; }
 
-.asides-column {
+.asides-group {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -679,30 +663,16 @@ h4 {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  width: 33.333%; }
-
-.aside-section {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  background-color: #fff;
-  padding: 8%;
+  width: 33.333%;
   margin: 0 40px 20px 0; }
-  .aside-section__image {
-    margin-bottom: 30px; }
-  .aside-section__headline {
+  .asides-group__container {
     margin-bottom: 20px; }
-  .aside-section__link--highlight {
-    color: #709b6b; }
-  .aside-section__list-item::before {
-    content: "•";
-    margin: 0 20px 0 10px; }
 
-.articles-section {
+.container {
+  background-color: #fff;
+  padding: 40px; }
+
+.main-content-group {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -711,40 +681,54 @@ h4 {
   -ms-flex-direction: column;
   flex-direction: column;
   width: 66.666%; }
-
-.article {
-  -webkit-box-flex: 1;
-  -ms-flex: 1 0 50%;
-  flex: 1 0 50%;
-  background: white; }
-  .article--blog-post {
-    padding: 30px;
-    border-bottom: 5px solid #709b6b;
-    margin-bottom: 30px; }
-  .article__paragraph {
-    margin-top: 15px; }
-  .article__comment {
+  .main-content-group__container {
+    margin-bottom: 20px; }
+    .main-content-group__container:nth-child(odd) {
+      border-bottom: 5px solid #709b6b; }
+  .main-content-group__content {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 50%;
+    flex: 1 0 50%; }
+  .main-content-group__comment {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
-    justify-content: space-between;
-    padding: 40px 30px;
-    margin-bottom: 20px; }
-    .article__comment:last-of-type {
-      margin-bottom: 30px;
-      border-bottom: 5px solid #709b6b; }
-  .article__title {
-    font-family: "Abril Fatface", cursive;
-    font-size: 26px;
-    font-size: 2.6rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 20px; }
-  .article__profile-image {
-    min-width: 100px;
-    margin-right: 30px; }
+    justify-content: space-between; }
+    .main-content-group__comment .profile-image {
+      width: 100px;
+      max-width: 100px; }
+
+.text-block__headline {
+  margin-bottom: 20px; }
+
+.text-block__paragraph {
+  margin: 15px 0; }
+
+.text-block__btn {
+  width: auto;
+  display: inline-block;
+  background: #e4a436;
+  font-family: "Abril Fatface", cursive;
+  line-height: 32px;
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #1f1f1f;
+  padding: 10px 30px;
+  margin-top: 15px; }
+
+.text-block__list-item::before {
+  content: "•";
+  margin: 0 20px 0 10px; }
+
+.text-block__link--highlight {
+  color: #709b6b; }
+
+.profile-image {
+  max-width: 100px;
+  width: 100px; }
 
 .form {
   display: -webkit-box;
@@ -787,13 +771,13 @@ h4 {
     border: none; }
 
 @media (max-width: 1110px) {
-  .columns-layout {
+  .blog-flex-wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
     -ms-flex-direction: column-reverse;
     flex-direction: column-reverse;
     padding: 50px 0; }
-  .asides-column {
+  .asides-group {
     width: 100%; }
   .bio {
     -webkit-box-orient: horizontal;
@@ -810,7 +794,7 @@ h4 {
     .aside-section:nth-of-type(2) {
       margin-bottom: 20px;
       margin-right: 0; }
-  .articles-section {
+  .articles-group {
     width: 100%; }
   .aside-section__image {
     max-width: 150px;
