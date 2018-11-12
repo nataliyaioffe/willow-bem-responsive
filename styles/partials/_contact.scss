@@ -3,7 +3,7 @@
      display: flex;
      margin-bottom: 20px;
      &__list-item {
-         margin-right: 35px;
+         margin: 0 20px;
     }
      &__link {
          color: $primary;
@@ -15,4 +15,4 @@
  .aside-section__link {
      font-weight: 700;
 }
- 
+//  END CONTACT PAGE STYLES

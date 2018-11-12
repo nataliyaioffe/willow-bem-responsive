@@ -1,3 +1,5 @@
+// BLOG PAGE STYLES
+
 .blog-flex-wrapper {
     display: flex;
     justify-content: space-between;
@@ -26,6 +28,8 @@
         margin-right: 20px;
         width: 100px;
         min-width: 100px;
+        margin-top: 25px;
+
     }
 }
 
@@ -48,7 +52,6 @@
         }
     }
 }
-// BEM TEST
 
 .text-block {
     &__headline {
@@ -56,6 +59,9 @@
     }
     &__paragraph {
         margin: 15px 0;
+    }
+    &__paragraph--date {
+        font-style: italic;
     }
     &__btn {
         @include button(auto);
@@ -101,62 +107,52 @@
         border: none;
     }
 }
-@media (max-width: 1110px) {
+
+// MEDIA QUERIES
+
+@media (max-width: 1005px) {
     .blog-flex-wrapper {
         flex-direction: column-reverse;
         padding: 50px 0;
     }
+    .aside-group, 
+    .main-content-group {
+        width: 100%;
+    }
     .aside-group {
-        width: 100%;
-    }
-    .bio {
-        flex-direction: row;
-    }
-    .aside-section {
-        justify-content: space-between;
-        padding: 30px;
-        &:nth-of-type(1) {
-            margin: 20px 0 20px 0;
-    }
-        &:nth-of-type(2) {
-            margin-bottom: 20px;
-            margin-right: 0;
-        }
-    }
-    .articles-group {
-        width: 100%;
-    }
-    .aside-group__image {
-        max-width: 150px;
-        margin-right: 30px;
+        margin-top: 30px;
         margin-bottom: 0;
-        display:inline-block;
     }
-}
-@media (max-width: 749px) {
-    .aside-group__image {
-        display:none;
-    }
-}
-@media (max-width: 625px) {
-    .header {
-        align-items: center;
-    }
-    .article__comment {
+    .aside-group .container {
+        display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
-    .article__profile-image {
-        width:100px;
-        margin-bottom: 10px;
+    .text-block__link {
+        display: block;
+    }
+    .aside-group__image {
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+    }
+    .text-block__list {
+        width: 100%;
+    }
+    .text-block__list-item {
+        text-align: left;
+    }
+    .comment__profile-image {
+        border-radius: 50%;
     }
 }
-@media (max-width: 510px) {
-    .aside-section {
-        &__link {
-            display: block;
-        }
-    }
+
+@media (max-width: 768px) {
     .form__input {
         width: 100%;
     } 
 }
+
+// END BLOG PAGE STYLES
